@@ -1,0 +1,13 @@
+.App {
+  width: 600px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Stars {
+  margin-top: 20px;
+  display: flex;
+  gap: 5px;
+}
