@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрирование по вертикали */
+    align-items: center; /* Центрирование по горизонтали */
+    height: 100vh; /* Высота на весь экран */
+    background-color: #f9f9f9; /* Светлый фон */
+    margin: 0;
+}
+
+.clock {
+    font-family: 'Arial', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.switch {
+    margin-top: 20px; /* Отступ сверху для кнопки */
+}

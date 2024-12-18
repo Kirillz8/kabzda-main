@@ -1,11 +1,12 @@
-import React, {useState} from "react";
-import "./App.css";
-import {Rating} from "./components/Rating/Rating";
-import {Accordion} from "./components/Accordion/Accordion";
-import {OnOff} from "./components/OnOff/OnOff";
+import React, {useState} from 'react';
+import './App.css';
+import {Rating} from './components/Rating/Rating';
+import {Accordion} from './components/Accordion/Accordion';
+import {OnOff} from './components/OnOff/OnOff';
 import {UnControlledOnOff} from './components/UnControlledOnOff/UnControlledOnOff';
-import {UnControlledAccordion} from "./components/UnControlledAccordion/UnControlledAccordion";
-import {UnControlledRating} from "./components/UnControlledRating/UnControlledRating";
+import {UnControlledAccordion} from './components/UnControlledAccordion/UnControlledAccordion';
+import {UnControlledRating} from './components/UnControlledRating/UnControlledRating';
+import {Clock} from './components/Clock/Clock';
 
 type PagePropsType = {
     title: string
@@ -28,14 +29,14 @@ function App() {
 
             <Rating value={ratingValue} onClick={setRatingValue}/>
 
-            <UnControlledAccordion titleValue="Menu" />
-            <UnControlledAccordion titleValue="Users" />
-
+            <UnControlledAccordion titleValue="Menu"/>
+            <UnControlledAccordion titleValue="Users"/>
 
 
             {/*<UnControlledRating />*/}
             Article 2
-            <Rating value={0} onClick={()=>{}}/>
+            <Rating value={0} onClick={() => {
+            }}/>
             {/*<Rating value={1}/>*/}
             {/*<Rating value={2}/>*/}
             {/*<Rating value={3}/>*/}
@@ -44,6 +45,8 @@ function App() {
             <OnOff on={switchOn} onChange={setSwitchOn}/>
             <UnControlledOnOff onChange={setSwitchOn}/>
             {switchOn.toString()}
+
+            <Clock/>
         </div>
     );
 }
