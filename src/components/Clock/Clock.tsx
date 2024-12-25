@@ -4,7 +4,9 @@ import {DigitalClock} from './DigitalClock/DigitalClock';
 import {FormControlLabel, Switch} from '@mui/material';
 import s from './Clock.module.css';
 
-export type PropsType = {}
+export type PropsType = {
+    mode?: 'digital' | 'analog'
+}
 
 export const Clock = (props: PropsType) => {
     const [date, setDate] = useState(new Date())
@@ -28,14 +30,14 @@ export const Clock = (props: PropsType) => {
     return (
         <div className={s.container}>
             <div className={s.clock}>
-            {showDigital ? <DigitalClock date={date}/> : <AnalogClock date={date}/>}
+                {props.mode === 'digital' && showDigital ? <DigitalClock date={date}/> : <AnalogClock date={date}/>}
             </div>
 
             <FormControlLabel
                 className={s.switch}
                 value="bottom"
                 control={<Switch color="primary" checked={showDigital} onChange={handleSwitchChange}/>}
-                label={showDigital ? 'Цифровые часы' : 'Аналоговые часы'}
+                label={props.mode === 'digital' && showDigital ? 'Цифровые часы' : 'Аналоговые часы'}
                 labelPlacement="bottom"
             />
 
